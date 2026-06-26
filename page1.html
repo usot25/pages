@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=onetrust.com">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .embed-container {
+            width: 40%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .media-iframe {
+            border: none;
+        }
+    </style>
+
+    <title>Embed Site Example</title>
+</head>
+
+<body>
+    <h1>Embed Site Example</h1>
+
+    <p>A few embeds like OT banner, custom cookies, YouTube, Vimeo, and other snippets.</p>
+
+
+    <!-- Vimeo Embed -->
+    <h2>Vimeo video</h2>
+
+    <iframe class="media-iframe" src="https://player.vimeo.com/video/1189998581" width="560" height="315"
+        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+
+
+    <!-- YouTube Privacy Enhanced Embed -->
+    <h2>YouTube privacy enhanced video</h2>
+
+    <iframe class="media-iframe" width="560" height="315"
+        src="https://www.youtube-nocookie.com/embed/8Z9FQxcCAZ0?si=MQxlRntFIU-Kospl" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+
+
+    <!-- Twitter Embed -->
+    <h2>Twitter embed</h2>
+
+    <blockquote class="twitter-tweet" data-media-max-width="560">
+        <p lang="en" dir="ltr">
+            📣 Registration is open for
+            <a href="https://twitter.com/hashtag/TrustWeek?src=hash&amp;ref_src=twsrc%5Etfw">#TrustWeek</a>
+            2025 on tour!
+            <br><br>
+            Our flagship event is where forward-thinking teams get in the loop on AI, data, and what’s next.
+            <br><br>
+            🗓️ New York | September 9<br>
+            🗓️ San Francisco | September 30<br>
+            🗓️ Amsterdam | October 21
+            <br><br>
+            Register now:
+            <a href="https://t.co/D7w66lGSkx">https://t.co/D7w66lGSkx</a>
+            <a href="https://t.co/dCSMlZBxU6">pic.twitter.com/dCSMlZBxU6</a>
+        </p>
+        &mdash; OneTrust (@OneTrust)
+        <a href="https://twitter.com/OneTrust/status/1940032855947579780?ref_src=twsrc%5Etfw">July 1, 2025</a>
+    </blockquote>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <br>
+
+    <!-- OneTrust cookies settings button start -->
+    <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <!-- OneTrust cookies settings button end -->
+
+    <br>
+
+    <!-- OneTrust cookies list start -->
+    <button id="toggle-cookie-list">Show Cookie List</button>
+    <div id="ot-sdk-cookie-policy" style="display:none;"></div>
+
+    <script>
+        const btn = document.getElementById('toggle-cookie-list');
+        const cookieList = document.getElementById('ot-sdk-cookie-policy');
+        let visible = false;
+
+        btn.addEventListener('click', function () {
+            visible = !visible;
+            cookieList.style.display = visible ? 'block' : 'none';
+            btn.textContent = visible ? 'Hide Cookie List' : 'Show Cookie List';
+        });
+    </script>
+    <!-- OneTrust cookies list end -->
+</body>
+
+</html>
