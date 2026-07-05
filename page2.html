@@ -6,16 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=onetrust.com">
 
-    <!-- OneTrust Cookies Consent Notice start for usot25.github.io/pages/page1.html -->
-    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
-        data-domain-script="019f02f6-8a9c-71c8-9c2a-288bdb131761"></script>
-    <script type="text/javascript">
-        function OptanonWrapper() {
-            var event = new Event('bannerLoaded');
-            window.dispatchEvent(event);
-        }
-    </script>
-    <!-- OneTrust Cookies Consent Notice end for usot25.github.io/pages/page1.html -->
+    
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,27 +44,12 @@
         }
     </style>
 
-    <title>Embed Site Example - Hiding Banner SDK</title>
+    <title>Embed Site Example</title>
 </head>
 
 <body>
-    <script>
-        window.addEventListener('bannerLoaded', function iniFrame() {
-            // When inside an iframe, this returns true, alternative - window.self !== window.top
-            if (window.location !== window.parent.location) {
-                console.log("The page IS in an iFrame")
-                document.getElementById("onetrust-consent-sdk").style.display = "none";
-                // alert("The page IS in an iFrame");
 
-            }
-            else {
-                console.log("The page is NOT in an iFrame")
-                // alert("The page is NOT in an iFrame");
-
-            }
-        }, false);
-    </script>
-    <h1>Embed Site Example - Added Event to Hide Banner if iFrame</h1>
+    <h1>Embed Site Example - No OneTrust Script Changes</h1>
 
     <p>A few embeds like OT banner, custom cookies, YouTube, Vimeo, and other snippets.</p>
 
