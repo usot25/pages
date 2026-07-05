@@ -10,7 +10,10 @@
     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
         data-domain-script="019f02f6-8a9c-71c8-9c2a-288bdb131761"></script>
     <script type="text/javascript">
-        function OptanonWrapper() { }
+        function OptanonWrapper() {
+            var event = new Event('bannerLoaded');
+            window.dispatchEvent(event);
+        }
     </script>
     <!-- OneTrust Cookies Consent Notice end for usot25.github.io/pages/page1.html -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,6 +55,25 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener('bannerLoaded', function iniFrame() {
+            // When inside an iframe, this returns true
+            // window.self !== window.top
+            if (window.location !== window.parent.location) {
+                console.log("The page IS in an iFrame")
+                // The page is in an iFrames 
+                alert("The page IS in an iFrame");
+                document.getElementById("onetrust-consent-sdk").style.display = "none";
+
+            }
+            else {
+                console.log("The page is NOT in an iFrame")
+                // The page is not in an iFrame 
+                alert("The page is NOT in an iFrame");
+
+            }
+        }, false);
+    </script>
     <h1>Embed Site Example</h1>
 
     <p>A few embeds like OT banner, custom cookies, YouTube, Vimeo, and other snippets.</p>
